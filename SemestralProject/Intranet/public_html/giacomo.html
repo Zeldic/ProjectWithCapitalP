@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../favicon.ico">
+
+        <title>Starter Template for Bootstrap</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="style.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <img alt="Brand" src="https://zeldic.github.io/ProjectWithCapitalP/PoseIT3.png">
+                    </a>
+                    <h1 class="navbar-text">Pose IT</h1>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <a href="tableResult.html" class="btn btn-default" >Search</a>
+                        </span>
+                        <label for="searchbox" id="schovejto">search box</label>
+                        <input type="text" id= "searchbox" class="form-control" placeholder="Search for...">
+                    </div><!-- /input-group -->
+
+                    <div class="list-group">
+                        <a href="floorMap.html" class="list-group-item">Printer map</a>
+                        <a href="searchEmployees.html" class="list-group-item">Employees</a>
+                        <a href="managementBlog.html" class="list-group-item">Management blog</a>
+                        <a href="news.html" class="list-group-item">News</a>
+                    </div>
+                    <a href="http://www.accuweather.com/en/cz/prague/125594/weather-forecast/125594" class="aw-widget-legal">
+                        <!--
+                        By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.
+                        -->
+                    </a><div id="awcc1481580976274" class="aw-widget-current"  data-locationkey="125594" data-unit="c" data-language="en-us" data-useip="false" data-uid="awcc1481580976274"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                    <img class="media-object" src="user.png" alt="user´s photo" height="240" width="240">
+                            </div>
+                            <div class="media-body">
+
+                                <table class="table">
+                                    <div class="h-card">
+                                        <tr>
+                                            <td>Name and Surname</td>
+                                            <td class="p-name">Giacomo Guilizzoni</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-tel">IP phone number</td>
+                                            <td>4052555</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mobile phone number</td>
+                                            <td class="p-tel">4052555</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Department</td>
+                                            <td class="p-extended-address">CEO Office</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Floor</td>
+                                            <td class="p-extended-address">11</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Location</td>
+                                            <td  class="geo" title="50.0662616;14.3730893">In Front side</td>
+                                        </tr>
+                                    </div>
+                                </table>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <!--<div id="map">
+                            <img src="https://zeldic.github.io/ProjectWithCapitalP/Floor11.png" alt="11th floor" style="width:872px;height:437px;">
+                        </div>-->
+                        <h3>Employee´s office location</h3>
+                        <div id="map"></div>
+                        <script>
+                            function initMap() {
+                                var uluru = {lat: 50.0662616, lng: 14.3730893};
+                                var map = new google.maps.Map(document.getElementById('map'), {
+                                    zoom: 13,
+                                    center: uluru
+                                });
+                                var marker = new google.maps.Marker({
+                                    position: uluru,
+                                    map: map
+                                });
+                            }
+                        </script>
+                        <script async defer
+                                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3VuTIHLAfAKjqb-2rQ6DSIqPQoAqqnzw&callback=initMap">
+                        </script>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <!--<button type="button"
+                onclick="document.getElementById('demo').innerHTML = Date()">
+            Click me to display Date and Time.</button>
+
+        <p id="demo"></p>--> 
+        <!--<script>sub.on("click", function(e){alert("Submitcliked")})</script>
+        -->  
+        <footer>Copyright © PoseIT.com</footer>
+        <!--<div id="footer">Copyright © W3Schools.com</div>-->
+    </body>
+
+</html>
